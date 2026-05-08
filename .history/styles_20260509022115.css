@@ -826,8 +826,8 @@ body {
     }
 }
 
-/* Mobile (320px - 900px) */
-@media (max-width: 900px) {
+/* Mobile (320px - 767px) */
+@media (max-width: 767px) {
     .container {
         padding: 0 12px;
     }

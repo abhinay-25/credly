@@ -826,8 +826,8 @@ body {
     }
 }
 
-/* Mobile (320px - 900px) */
-@media (max-width: 900px) {
+/* Mobile (320px - 767px) */
+@media (max-width: 767px) {
     .container {
         padding: 0 12px;
     }
@@ -893,28 +893,20 @@ body {
     }
 
     .badge-banner-inner {
-        display: grid !important;
-        grid-template-columns: auto 1fr !important;
-        grid-template-rows: auto auto !important;
+        display: flex;
+        flex-direction: column;
         gap: 12px;
-        align-items: start;
+        align-items: stretch;
     }
 
     .badge-banner-icon {
         width: 48px;
         height: 48px;
-        grid-row: 1;
-        grid-column: 1;
     }
 
     .badge-banner-icon svg {
         width: 26px;
         height: 26px;
-    }
-
-    .badge-banner-info {
-        grid-row: 1;
-        grid-column: 2;
     }
 
     .badge-issued-text {
@@ -932,10 +924,8 @@ body {
         flex-direction: row;
         gap: 8px;
         display: flex;
-        justify-content: stretch;
+        justify-content: flex-start;
         width: 100%;
-        grid-row: 2;
-        grid-column: 1 / -1;
     }
 
     .badge-banner-actions .btn {
@@ -944,9 +934,9 @@ body {
         white-space: nowrap;
         display: flex;
         align-items: center;
-        justify-content: center;
         gap: 6px;
         flex: 1;
+        justify-content: center;
     }
 
     .badge-banner-actions .btn svg {

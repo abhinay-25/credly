@@ -826,8 +826,8 @@ body {
     }
 }
 
-/* Mobile (320px - 900px) */
-@media (max-width: 900px) {
+/* Mobile (320px - 767px) */
+@media (max-width: 767px) {
     .container {
         padding: 0 12px;
     }
@@ -893,9 +893,9 @@ body {
     }
 
     .badge-banner-inner {
-        display: grid !important;
-        grid-template-columns: auto 1fr !important;
-        grid-template-rows: auto auto !important;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto auto;
         gap: 12px;
         align-items: start;
     }
