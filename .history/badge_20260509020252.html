@@ -334,11 +334,8 @@
       document.addEventListener("DOMContentLoaded", function () {
         // Check URL parameter first, then fallback to localStorage, then default
         const urlParams = new URLSearchParams(window.location.search);
-        let name =
-          urlParams.get("name") ||
-          localStorage.getItem("badgeName") ||
-          "Suhaas Bandari";
-
+        let name = urlParams.get('name') || localStorage.getItem("badgeName") || "Suhaas Bandari";
+        
         document.getElementById("badgeName").textContent = name;
         document.getElementById("verifyName").textContent = "Issued to " + name;
 

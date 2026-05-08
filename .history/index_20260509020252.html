@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credly Badge - Enter Your Name</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">
+                    <img src="assets/image.png" alt="Credly Logo" class="logo-img">
+                </a>
+                <nav class="nav">
+                    <button class="btn btn-secondary">Create Account</button>
+                    <button class="btn btn-primary">Sign In</button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content entry-page">
+        <div class="container">
+            <div class="entry-card">
+                <h1 class="entry-title">Enter Your Name</h1>
+                <p class="entry-subtitle">View your Cisco Junior Cybersecurity Analyst Career Path badge</p>
+                
+                <form class="entry-form" id="nameForm">
+                    <div class="form-group">
+                        <label for="nameInput" class="form-label">Your Name</label>
+                        <input 
+                            type="text" 
+                            id="nameInput" 
+                            class="form-input" 
+                            placeholder="Enter your full name"
+                            required
+                        >
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-large">View Badge</button>
+                </form>
+
+                <p class="entry-note">Or use a pre-filled name: <strong>Suhaas Bandari</strong></p>
+                <button class="btn btn-secondary" onclick="setDefaultName()">Load Default Example</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="#" class="footer-link">Request Demo</a>
+                <a href="#" class="footer-link">About Credly</a>
+                <a href="#" class="footer-link">Terms</a>
+                <a href="#" class="footer-link">Privacy</a>
+                <a href="#" class="footer-link">Developers</a>
+                <a href="#" class="footer-link">Support</a>
+                <a href="#" class="footer-link">Cookies</a>
+                <a href="#" class="footer-link">Do Not Sell My Personal Information</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('nameForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('nameInput').value.trim();
+            if (name) {
+                // Redirect to badge page with name as URL parameter
+                window.location.href = 'badge.html?name=' + encodeURIComponent(name);
+            }
+        });
+
+        function setDefaultName() {
+            // Redirect to badge page with default name as URL parameter
+            window.location.href = 'badge.html?name=Suhaas%20Bandari';
+        }
+    </script>
+</body>
+</html>
